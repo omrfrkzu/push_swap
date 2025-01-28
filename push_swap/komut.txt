@@ -1,0 +1,5 @@
+ARG=$(seq 100 | sort -R | tr '\n' ' ') && ./push_swap $ARG | ./checker_linux $ARG
+ARG=$(seq 100 | sort -R | tr '\n' ' ') && ./push_swap $ARG | wc -l
+
+ARG=$(shuf -i 1-10000 -n 100 | tr "\n" " "); ./push_swap $ARG | ./checker_linux $ARG
+ARG=$(shuf -i 1-10000 -n 100 | tr "\n" " "); ./push_swap $ARG | wc -l
